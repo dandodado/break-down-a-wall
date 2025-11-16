@@ -1,7 +1,8 @@
 class Wall {
    
-    constructor(x, y) {
-this.pos = createVector( 0+x, 50+y);
+    constructor(x, y, w) {
+this.pos = createVector( x, y);
+this.w = w;
     
 }
 
@@ -9,7 +10,7 @@ Show () {
 rectMode(CENTER);
 noStroke();
 fill(150, 75, 0);
-rect(this.pos.x, this.pos.y, 50, 50);
+rect(this.pos.x, this.pos.y, this.w, this.w);
 
 }
 
