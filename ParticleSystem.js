@@ -19,6 +19,11 @@ class ParticleSystem {
       }
     }
   }
+   place() {
+    this.origin = createVector(mouseX, mouseY);
+  }
+
+
 
 }
 
