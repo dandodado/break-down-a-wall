@@ -4,7 +4,7 @@ class Particle {
     this.velocity = createVector(random(-1, 1), random(-1, 0));
     this.position = position.copy();
     this.lifespan = 100;
-    this.mass = 12;
+    this.mass = 8;
   }
 
   run() {
@@ -27,7 +27,7 @@ class Particle {
   display() {
     stroke(200, this.lifespan);
     strokeWeight(2);
-    fill(127, this.lifespan);
+    fill(150, 75, 0, this.lifespan);
     ellipse(this.position.x, this.position.y, this.mass,this.mass);
   }
 

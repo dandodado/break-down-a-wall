@@ -14,16 +14,19 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(255,255,255);
   for (let wall of walls) {
+    if (wall.m == 0){
     wall.Show();
+    }else{
+      wall.remove();
+    }
   }
 system.run();
-  if (p > 20){
+  if (p > 17){
   p = 0;
-  } else if (p > 1 && p <= 20){
+  } else if (p > 1 && p <= 17){
     p++;
-  
     system.addParticle();
   }
 }
@@ -33,11 +36,9 @@ function mousePressed() {
   system.place();
   p = 2;
   for (let wall of walls) {
-    if (dist(wall.pos.x, wall.pos.y, mouseX, mouseY)>this.w/2){
+    if (dist(wall.pos.x, wall.pos.y, mouseX, mouseY)<wall.w/2){
         wall.m = 1;
-    } else {
-        wall.m = 0;
-    }
+    } 
   }
    
 
